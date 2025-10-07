@@ -27,6 +27,9 @@
       var player = jwplayer("player");
       player.setup({
         file: video,
+        onXhrOpen: function(xhr, url) {
+            xhr.setRequestHeader('user-agent', 'AppleCoreMedia/1.0.0.25A362 (Macintosh; U; Intel Mac OS X 26_0_1; en_us)');
+        },
         image: cover,
         height: "100%",
         width: "100%",
