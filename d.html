@@ -29,7 +29,7 @@
       var engine = new p2pml.hlsjs.Engine();
       var player = jwplayer("player");
       player.setup({
-        file: video,
+        file: video.replace("vbd.mediaset.es", "vbdk.mediaset.es").replace("/main.ism/picky.m3u8", "/mpd-cenc.ism/web.mpd"),
         onXhrOpen: function(xhr, url) {
             xhr.setRequestHeader('user-agent', 'AppleCoreMedia/1.0.0.25A362 (Macintosh; U; Intel Mac OS X 26_0_1; en_us)');
         },
