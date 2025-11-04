@@ -23,6 +23,9 @@
       const video = data.get("video");
       const cover = data.get("cover");
 
+      const key1 = data.get("key1");
+      const key2 = data.get("key2");
+
       var engine = new p2pml.hlsjs.Engine();
       var player = jwplayer("player");
       player.setup({
@@ -38,8 +41,8 @@
         aspectratio: "16:9",
         drm: {
           clearkey: {
-            keyId: "f40532162fcf48db90218976395266ab", // 575cb35f7f4fc5ae5d3f0321f679448b
-            key: "575cb35f7f4fc5ae5d3f0321f679448b", //f40532162fcf48db90218976395266ab
+            keyId: key1, // 575cb35f7f4fc5ae5d3f0321f679448b
+            key: key2, //f40532162fcf48db90218976395266ab
           },
         },
       });
