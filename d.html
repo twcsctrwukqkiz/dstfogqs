@@ -21,6 +21,7 @@
       const data = new URLSearchParams(window.location.search);
 
       const video = data.get("video").replace("vbd.mediaset.es", "vbdk.mediaset.es").replace("/main.ism/picky.m3u8", "/mpd-cenc.ism/web.mpd");
+      console.log(video)
       const cover = data.get("cover");
 
       const key1 = data.get("key1");
